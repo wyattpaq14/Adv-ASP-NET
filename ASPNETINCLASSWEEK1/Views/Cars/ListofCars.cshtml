@@ -1,0 +1,37 @@
+﻿@model List<ASPNETINCLASSWEEK1.Models.Car>
+
+@{
+    ViewBag.Title = "ListofCars";
+}
+
+<h2>ListofCars</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>This Week's Deals</h2>
+        <p>
+            Welcome to our showroom. Treat yourself to a safe new vehicle.
+        </p>
+    </div>
+    <div class="col-md-8">
+        @using (Html.BeginForm("ListofCars", "Cars"))
+        {
+            @Html.TextBox("searchCriteria");
+            <input class="btn" type="submit" value="Find cars" />
+        }
+        <h2>This week's deals</h2>
+        <table class="table-striped table-bordered table-responsive">
+            @foreach (var car in Model)
+            {
+                <tr>
+                    <td>@car.Model</td>
+                    <td>@car.MaxSpeed</td>
+                    <td>@Html.ActionLink("Details", "Details", new { id = car.Car_ID })</td>
+                </tr>
+                }
+
+
+        </table>
+    </div>
+</div>
+
