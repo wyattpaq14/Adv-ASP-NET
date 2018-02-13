@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Action1";
+    Layout = "~/Views/shared/_Layout.cshtml";
+}
+
+<h2>Available languages</h2>
+<ul>
+    @foreach(var lang in ViewBag.LanguagesList)
+    {
+        <li>@lang.EnglishName</li>
+    }
+</ul>
