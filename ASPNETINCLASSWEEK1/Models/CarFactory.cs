@@ -14,7 +14,7 @@ namespace ASPNETINCLASSWEEK1.Models
         {
             Database.SetInitializer(new CarIntitalizer());
         }
-
+         
     }
 
     public class CarIntitalizer : DropCreateDatabaseIfModelChanges<CarFactory>

@@ -15,4 +15,4 @@ namespace ASPNETINCLASSWEEK1.Models
         public double MaxSpeed { get; set; }
 
     }
-}
+} 

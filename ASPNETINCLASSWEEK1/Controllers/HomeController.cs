@@ -36,5 +36,5 @@ namespace ASPNETINCLASSWEEK1.Controllers
 
             return View();
         }
-    }
+    } 
 }

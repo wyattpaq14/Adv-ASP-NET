@@ -14,8 +14,6 @@ namespace ASPNETINCLASSWEEK1
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
 
-            
-
             routes.MapRoute(
                 name: "About",
                 url: "About",
