@@ -25,25 +25,29 @@ namespace ASPNETINCLASSWEEK1.Models
                 context.Cars.Add(new Models.Car()
                 {
                     Model = "Egg",
-                    MaxSpeed = 123.00
+                    MaxSpeed = 123.00,
+                    ImageName = "egg"
                 });
 
                 context.Cars.Add(new Models.Car()
                 {
-                    Model = "Shoe",
-                    MaxSpeed = 12.908
+                    Model = "Egg2",
+                    MaxSpeed = 12.908,
+                    ImageName = "egg2"
                 });
 
                 context.Cars.Add(new Models.Car()
                 {
-                    Model = "Man",
-                    MaxSpeed = 11.93
+                    Model = "Egg3",
+                    MaxSpeed = 11.93,
+                    ImageName = "egg3"
                 });
 
                 context.Cars.Add(new Models.Car()
                 {
-                    Model = "Potato",
-                    MaxSpeed = 32.90
+                    Model = "Egg2",
+                    MaxSpeed = 32.90,
+                    ImageName = "egg2"
                 });
 
             }

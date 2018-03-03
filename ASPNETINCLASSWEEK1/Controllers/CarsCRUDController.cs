@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Helpers;
 using ASPNETINCLASSWEEK1.Models;
 
 namespace ASPNETINCLASSWEEK1.Controllers
@@ -18,6 +19,23 @@ namespace ASPNETINCLASSWEEK1.Controllers
         public ActionResult Index()
         {
             return View(db.Cars.ToList());
+        }
+
+        public ActionResult Picture(int id)
+        {
+            var factory = new CarFactory();
+
+            var car = factory.Cars.Where(p => p.Car_ID == id).FirstOrDefault();
+
+            if (car == null)
+            {
+                return HttpNotFound();
+            }
+
+            var img = new WebImage(string.Format("~/Images/{0}.jpg", car.ImageName));
+            img.Resize(100, 100);
+
+            return File(img.GetBytes(), "image/jpeg");
         }
 
         // GET: CarsCRUD/Details/5

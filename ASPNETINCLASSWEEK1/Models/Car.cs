@@ -11,8 +11,13 @@ namespace ASPNETINCLASSWEEK1.Models
         //Simple car properties
         [Key]
         public int Car_ID { get; set; }
-        public string Model { get; set; }
-        public double MaxSpeed { get; set; }
 
+        [Required]
+        [RegularExpression("..+")]
+        public string Model { get; set; }
+
+        [Range(10,300)]
+        public double MaxSpeed { get; set; }
+        public string ImageName { get; set; }
     }
 } 
