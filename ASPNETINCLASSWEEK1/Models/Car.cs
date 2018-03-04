@@ -19,5 +19,9 @@ namespace ASPNETINCLASSWEEK1.Models
         [Range(10,300)]
         public double MaxSpeed { get; set; }
         public string ImageName { get; set; }
+
+        public int Manufacturer_ID { get; set; }
+
+        public virtual Manufactruer Manufactruer { get; set; }
     }
 } 

@@ -1,0 +1,26 @@
+﻿@model ASPNETINCLASSWEEK1.Models.Manufactruer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Manufactruer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Make)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Manufactruer_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
